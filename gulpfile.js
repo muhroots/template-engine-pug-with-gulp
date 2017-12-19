@@ -17,5 +17,5 @@ gulp.task('views', () => {
 })
 
 gulp.task('watch', () => {
-  gulp.watch(['./source/views/*.pug'], ['views'])
+  gulp.watch(['./source/views/**/*.pug'], ['views'])
 })

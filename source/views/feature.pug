@@ -1,0 +1,16 @@
+//- feature.pug
+extends layout/master.pug
+
+block title
+  title Meetup - II
+
+block content
+  main(role='main')
+    section.application 
+
+block append script
+  script(src='/js/home.js')
+  script
+    include ../js/application.js
+
+
