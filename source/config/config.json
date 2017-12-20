@@ -1,5 +1,15 @@
 {
   "event": {
-    "name": "Bate papo sobre tecnologia experiências e carreira"
+    "name": "Bate papo sobre tecnologia experiências e carreira",
+    "description": "Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região.",
+    "image": "https://secure.meetupstatic.com/photos/event/c/0/f/d/global_467029405.jpeg",
+    "startDate": "2017-12-20T18:45:00",
+    "endDate": "2017-12-20T21:30:00",
+    "stringDate": "quarta-feira, 20 de dezembro de 2017 <span>18:45 até 21:30</span>",
+    "location": {
+      "name":"Forspace",
+      "street": "Rua Nicolau Cacciatori, 489",
+      "locality": "Presidente Prudente"
+    }
   }
 }

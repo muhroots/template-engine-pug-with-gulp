@@ -1,0 +1,38 @@
+mixin event-card(event)
+  - var location = event.location
+
+  article(class=`card ${location ? 'street-view' : 'card-small'}`, itemscope, itemtype='http://schema.org/Event')
+    h2.card-title(itemprop='name') #{event.name}
+    img.card-poster(src=event.image, itemprop="image")
+
+    time(datetime=event.startDate, itemprop="startDate", content=event.startDate) !{event.stringDate}
+    
+    if location
+      address.card-location(itemprop='location', itemscope='', itemtype='http://schema.org/Place')
+        span(itemprop='name') Forspace
+        .card-address(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
+          span(itemprop='streetAddress') Rua Nicolau Cacciatori, 489 
+          span(itemprop='addressLocality') Presidente Prudente
+
+    .card-description(itemprop='description') #{event.description}
+
+
+
+//- static mixin
+//- 
+//- mixin event-card(event)
+//-   article.card(itemscope itemtype='http://schema.org/Event')
+//-     h2.card-title(itemprop='name') Bate papo sobre tecnologia II
+//-     img.card-poster(src='/images/poster.png', itemprop="image")
+
+//-     time(datetime="2017-12-20T18:45:00", itemprop="startDate", content="2017-12-20T18:45:00")
+//-       | quarta-feira, 20 de dezembro de 2017 #[span 18:45 até 21:30]
+    
+//-     address.card-location(itemprop='location', itemscope='', itemtype='http://schema.org/Place')
+//-       span(itemprop='name') Forspace
+//-       .card-address(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
+//-         span(itemprop='streetAddress') Rua Nicolau Cacciatori, 489 
+//-         span(itemprop='addressLocality') Presidente Prudente
+
+//-     .card-description(itemprop='description')
+//-       | Segundo encontro da comunidade de desenvolvedores de Presidente Prudente e região.

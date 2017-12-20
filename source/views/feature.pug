@@ -1,12 +1,16 @@
 //- feature.pug
 extends layout/master.pug
 
+//- includes
+include mixin/event.pug
+
 block title
   title Meetup - II
 
 block content
   main(role='main')
     section.application 
+      +event-card(event)
 
 block append script
   script(src='/js/home.js')
