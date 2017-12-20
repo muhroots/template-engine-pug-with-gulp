@@ -16,6 +16,13 @@ mixin event-card(event)
 
     .card-description(itemprop='description') #{event.description}
 
+    if block
+      block
+    else
+      .event-count
+        a(href='') Convidar amigos
+
+
 
 
 //- static mixin

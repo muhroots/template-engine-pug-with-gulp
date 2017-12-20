@@ -4,16 +4,15 @@ extends layout/master.pug
 //- includes
 include mixin/event.pug
 
-block title
-  title Meetup - II
-
 block content
   main(role='main')
     section.application 
       +event-card(event)
+        .event-count
+          strong 36 Members confirmados
 
 block append script
-  script(src='/js/home.js')
+  script(src='/js/events.js')
   script
     include ../js/application.js
 
